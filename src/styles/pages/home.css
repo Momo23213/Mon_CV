@@ -1,0 +1,86 @@
+:root{
+    --color1:#2a1d52;
+    --color2:#6c77f4;
+    --color3:rgb(99,164,233);
+    --color4:#4FEDD2;
+    --color5:#36D0EA;
+    --white:#ddd;
+    --black:#333;
+
+    --BR:25px;
+    --shadow:0 1px 3px #333;
+    --minH:95vh;
+
+}
+.homeContent{
+    background: linear-gradient(115deg, var(--color1) 50%, transparent 100%);
+    min-height: var(--minH);
+    width: 100%;
+    border-radius: var(--BR);
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content: "test";
+        position: absolute;
+        height: 100%;
+        width: inherit;
+        background-image: url("../../../public/media/images\ \(4\).jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+        filter: brightness(30%);
+    }
+}
+
+.contenue{
+    position: absolute;
+    top: 20%;
+    left: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: 5rem;
+    color: var(--color5);
+    text-transform: uppercase;
+    text-shadow: 3px 6px 2px var(--black);
+}
+h2{
+    font-size: 2.5rem;
+    padding: 1.5rem 0 7rem;
+    color: var(--color3);
+    text-shadow: 1px 4px 1px var(--black);
+}
+
+.pdf a{
+    font-size: 1.5rem;
+    background: var(--color3);
+    border-radius: var(--BR);
+    padding: 1rem 2rem;
+    transition: 0.2s ease;
+    box-shadow: 0 5px 1px rgb(15,15,15);
+    &:hover{
+        background: var(--color4);
+    }
+}
+
+@media screen and (max-width:850px) {
+    .homeContent{
+        margin: 0 !important;
+    }
+}
+@media screen and (max-width:580px) {
+    .homeContent::after{
+        background-image: url("../../../public/media/images\ \(4\).jpeg");
+        background-repeat: no-repeat;
+        background-position: 60% 50% !important;
+        background-size: cover; 
+    }
+    h1{
+        font-size: 3rem !important;
+    }
+    h2{
+        font-size: 1.8rem !important;
+    }
+}

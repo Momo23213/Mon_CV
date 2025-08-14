@@ -1,0 +1,19 @@
+.home, .knowledges, .porfolio, .contact{
+    display: flex;
+}
+
+.homeContent, .knowledgescontent{
+    margin-left: 0.4rem;
+}
+
+
+@media screen and (max-width:850px) {
+    .home, .knowledges, .porfolio, .contact{
+    display: block !important;
+}
+}
+@media screen and (max-width:850px) {
+    .homeContent, .knowledgescontent{
+    margin-left: 0 !important;
+}
+}

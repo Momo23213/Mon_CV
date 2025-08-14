@@ -1,0 +1,202 @@
+:root{
+    --color1:#2a1d52;
+    --color2:#6c77f4;
+    --color3:rgb(99,164,233);
+    --color4:#4FEDD2;
+    --color5:#36D0EA;
+    --white:#ddd;
+    --black:#333;
+
+    --BR:25px;
+    --shadow:0 1px 3px #333;
+    --minH:95vh;
+
+}
+
+.knowledgescontent{
+    min-height: var(--minH);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 38% 1fr 1fr;
+    grid-template-rows: 65% 35%;
+    grid-template-areas: 
+    "L E E"
+    "O O H";
+}
+h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color5);
+    text-transform: uppercase;
+
+}
+
+.langueframe, .hobbie, .experience, .autre{
+    background: var(--color2);
+    border-radius: var(--BR);
+    padding: 0.8rem;
+    margin: 0.2rem;
+}
+.langueframe{
+    grid-area: L;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "L" 
+    "F"; 
+}
+.LanguagesDisplay{
+    grid-area: L;
+}
+.frameworkDisplay{
+    grid-area: F;
+}
+.anne{
+    font-size: 0.65rem;
+    display: flex;
+    color: var(--white);
+}
+
+.anne span{
+    width: 36%;
+    &:nth-child(2){
+        text-align: center;
+        width: 20%;
+    }
+    &:nth-child(3){
+        text-align: right;
+        width: 44%;
+    }
+    &:nth-child(2)::before,
+    &:nth-child(3)::before{
+        content: "";
+        background: rgb(99,164,233,0.5);
+        position: absolute;
+        width: 2px;
+        height: 146px;
+        transform: translate(9px,19px);
+    }
+}
+.languageslist{
+    padding-top: 0.5rem;
+}
+
+.languageslist li{
+    color: var(--color1);
+}
+.languageslist .progresBar{
+  height: 0.4rem;
+  background: transparent;
+  border-radius: 50px;
+  margin-top: 0.2rem;
+  position: relative;
+  &::after{
+    content: "";
+    background: var(--color1);
+    border-radius: 50px;
+    height: 0.4rem;
+    position: absolute;
+    width:0;
+    animation: line 2s ease-in-out forwards;
+    
+  }
+}
+@keyframes line {
+    to{
+        width: 100%;
+    }
+}
+.experience{
+    grid-area: E;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 40% 40%;
+    grid-template-areas: 
+    "1"
+    "2"
+    "3";
+}
+.titre{
+    margin: 0;
+    font-size: 1.8rem;
+}
+.experience h3{
+    grid-area: 1;
+
+}
+.exp1{
+    grid-area: 2;
+    padding: 0;
+}
+.exp2{
+    grid-area: 3;
+    padding: 0;
+}
+.hobbie{
+   grid-area: H;
+}
+.autre{
+  grid-area: O;
+}
+
+@media screen and (max-width:950) {
+   .knowledgescontent h3{
+    font-size: 1.2rem !important;
+   } 
+    
+}
+@media screen and (max-width:500) {
+
+    
+}
+@media screen and (max-width:500px) {
+  .knowledgescontent{
+    min-height: var(--minH);
+    width: 99%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    "L"
+    "E"
+    "O"
+    "H";
+}
+.langueframe{
+    grid-area: L;
+    display: grid;
+    margin: 1px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "L" 
+    "F"; 
+}
+.LanguagesDisplay{
+    grid-area: L;
+}
+.frameworkDisplay{
+    grid-area: F;
+}
+.experience{
+    grid-area: E;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 40% 40%;
+    grid-template-areas: 
+    "1"
+    "2"
+    "3";
+}
+   .hobbie{
+   grid-area: H;
+}
+.autre{
+  grid-area: O;
+} 
+}
