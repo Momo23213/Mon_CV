@@ -7,7 +7,7 @@ export default function Navigation() {
     <div className="sidebar">
         <div className="id">
             <div className="idcontent">
-                <img src="../../public/media/profile.png" alt="Mon image" width={150}/>
+                <img src="/public/media/profile.png" alt="Mon image" width={150}/>
                 <h3>Fode Momo Soumah</h3>
             </div>
         </div>

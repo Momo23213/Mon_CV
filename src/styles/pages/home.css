@@ -24,7 +24,7 @@
         position: absolute;
         height: 100%;
         width: inherit;
-        background-image: url("../../../public/media/images\ \(4\).jpeg");
+        background-image: url("/public/media/images\ \(4\).jpeg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
